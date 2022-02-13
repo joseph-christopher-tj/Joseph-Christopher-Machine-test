@@ -1,0 +1,52 @@
+.trv-color {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    &__tile {
+        border-radius: 6px;
+        border: 1px solid $grey-4;
+        width: 122px;
+        text-align: center;
+        margin: 4px;
+        display: flex;
+        flex-direction: column;
+        min-height: 60px;
+        cursor: pointer;
+        &:hover {
+            border: 1px solid $grey-3;
+            border-radius: 8px;
+            .trv-color__body {
+                font-weight: $font-semibold;
+            }
+        }
+    }
+    &__head {
+        font-size: 10px;
+        font-weight: $font-semibold;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        color: $white;
+        padding: 5px;
+        &--orange {
+            &.trv-color__head {
+                background-color: $orange;
+            }
+        }
+        &--purple {
+            &.trv-color__head {
+                background-color: $purple;
+            }
+        }
+    }
+    &__body {
+        font-size: 13px;
+        background-color: $white;
+        color: $grey-3;
+        padding: 10px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%
+    }
+}

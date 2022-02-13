@@ -1,0 +1,101 @@
+.trv-product-img-slider {
+    &__slider-nav {
+        margin-top: 8px;
+        .slick-list {
+            padding: 8px 0px;
+        }
+    }
+    &__nav-item {
+        margin: 0px 6px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        overflow: hidden;
+        &.slick-current {
+            border: 1px solid rgba(0, 0, 0, 0.24);
+        }
+    }
+    &__slider-for {
+        z-index: 1;
+        &:hover {
+            .slick-list {
+                overflow: unset
+            }
+        }
+    }
+    .zoom-box {
+        .viewer-box {
+            left: auto !important;
+            top: 20px !important;
+            right: -440px;
+        }
+        .zoom-selector {
+            background-image: none;
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+    }
+    .viewer-box {
+        img {
+            width: 200% !important;
+            height: 200% !important;
+            object-fit: cover;
+        }
+    }
+    .slick-arrow {
+        width: 48px;
+        height: 48px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+        &::before {
+            content: none;
+        }
+    }
+    .slick-prev {
+        background-image: url(../images/arrow-left.svg);
+        left: 0;
+    }
+    .slick-next {
+        background-image: url(../images/arrow-right.svg);
+        right: 0;
+    }
+}
+
+@include mobile-tablet {
+    .trv-product-img-slider {
+        &__slider-for {
+            .viewer-box {
+                display: none !important;
+            }
+            .zoom-selector {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .trv-product-img-slider {
+        &__nav-item {
+            margin: 0 4px;
+        }
+        .slick-arrow {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@include ie-fix {
+    .trv-product-img-slider {
+        .zoom-box {
+            .viewer-box {
+                position: fixed;
+                left: 50% !important;
+                top: 150px !important;
+                right: unset;
+            }
+        }
+    }
+}

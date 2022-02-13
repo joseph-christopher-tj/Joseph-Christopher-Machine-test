@@ -1,0 +1,12 @@
+.trv-star-rate {
+    display: flex;
+    align-items: center;
+    &__img {
+        width: 90px;
+    }
+    &__txt {
+        display: inline-block;
+        margin-left: 8px;
+        color: $grey-3
+    }
+}
